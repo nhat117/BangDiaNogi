@@ -7,7 +7,7 @@ using namespace std;
 class item {
     private:
         string id;
-x       string title;
+        string title;
         string rental_type;
         string loan_type;
         int in_stock;
