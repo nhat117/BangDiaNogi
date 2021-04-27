@@ -38,20 +38,10 @@ struct item_Node {
     item_Node* next;
 };
 
-class customer_Node {
-    public:
-        customer data;
-        customer_Node* next;
+struct customer_Node {
+    customer data;
+    customer_Node* next;
 };
-
-void pushNode(item_Node** head, item data) {
-    // item_Node* new_Node = new item_Node();
-}
-
-void pushNode(customer_Node** head, customer data) {
-
-}
-
 
 int main() {
     // Generating head and tail for linked lists
