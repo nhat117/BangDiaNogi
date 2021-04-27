@@ -4,6 +4,9 @@
 
 using namespace std;
 
+
+
+
 class customer {
 
 };
@@ -18,7 +21,16 @@ class item {
         float rental_fee;
         string rental_status;
     public:
-
+        item (string id, string title, string rental_type, string loan_type, int in_stock, float rental_fee, string rental_status) {
+            this->id = id;
+            this->title = title;
+            this->rental_type = rental_type;
+            this->loan_type = loan_type;
+            this->in_stock = in_stock;
+            this->rental_fee = rental_fee;
+            this->rental_status = rental_status;
+        }
+        
 };
 
 class movie_records : item {
@@ -29,7 +41,28 @@ class dvd : item {
 
 };
 
+class video_games: item {
+
+};
+
+struct item_Node {
+    item data;
+    item_Node* next;
+};
+
+struct customer_Node {
+    customer data;
+    customer_Node* next;
+};
+
 int main() {
+    // Generating head and tail for linked lists
+    customer_Node* head_cus = nullptr;
+    customer_Node* tail_cus = nullptr;
+    item_Node* head_it = nullptr;
+    item_Node* tail_it = nullptr;
+
+
     string inp;
     while (true) {
         cout << "Welcome to Genie's video store\n";
