@@ -9,13 +9,13 @@ class Customer {
         string Phone;
 		string ID;
 		item List[];
-		int NoItem;
     public:
 		Customer ();
 		Customer (string Name, string Address, string Phone);
 
 		// Setter
-		void setAll (string Name, string Address, string Phone, string ID, string Item[]);
+		void setAll (string Name, string Address, string Phone, string ID, item
+		 Item[]);
 		void setName (string Name) {this -> Name = Name;}
 		void setAddress(string Address)	{this -> Address = Address;}
 		void setPhone(string Phone){this -> Phone = Phone;}
@@ -43,7 +43,7 @@ Customer :: Customer () {
 	this -> ID = "C000";
 }
 
-void Customer :: setAll (string Name, string Address, string Phone, string ID, string ListItem[]) {
+void Customer :: setAll (string Name, string Address, string Phone, string ID, item ListItem[]) {
 	this -> Name = Name;
 	this -> Address = Address;
 	this -> Phone = Phone;
@@ -54,17 +54,23 @@ class Guest : public Customer {
 	private :
 		int point;
 		string rank = "Guest";
+		int NumberofItem;
 	public :
 		Guest ();
-		Guest (string Name, string Address, string Phone);
+		Guest (string Name, string Address, string Phone, string ID);
 
 		//Setter
-		void setAll (string Name, string Address, string Phone, string ID, string ListItem[]);
+		void setAll (string Name, string Address, string Phone, string ID, item ItemName, int NumberofItem);
 
 		//Getter
 		string getName () {return this -> getName();}
 		string getAddress()	{return this -> getAddress();}
 		string getPhone() {return this -> getPhone();}
-		string getId() {return this ->getId();}
-		string getRank() {return rank;}
+		string getId() {return this -> getId();}
+		string getRank() {return this -> rank;}
+		int getNumberofItem () {return this -> NumberofItem;}
 };
+
+void Guest :: setAll (string Name, string Address, string Phone, string ID, item ItemName, int NumberofItem) {
+	
+}
