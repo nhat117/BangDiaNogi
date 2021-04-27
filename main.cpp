@@ -61,7 +61,21 @@ int main() {
     customer_Node* tail_cus = nullptr;
     item_Node* head_it = nullptr;
     item_Node* tail_it = nullptr;
+    int cus_size = 0;
+    int it_size = 0;
 
+    ifstream inp_it("items.txt");
+    ifstream inp_cus("customers.txt");
+    if (!inp_it.is_open()) {
+        cerr << "Database can not be opened!" << endl;
+        return 1;
+    }
+    if (!inp_cus.is_open()) {
+        cerr << "Database can not be opened!" << endl;
+        return 1;
+    }
+
+    
 
     string inp;
     while (true) {
