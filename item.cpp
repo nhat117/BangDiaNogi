@@ -73,6 +73,10 @@ class item {
         void setFee(int rental_fee) {
             this->rental_fee = rental_fee;
         }
+        void restock() {
+            in_stock++;
+            cout << "Restock successful" << endl;
+        }
 };
 
 class movie_records : item {
