@@ -94,8 +94,9 @@ class movie_records : item {
             else this->genre = genre;
         }
 };
-
+/////////////////
 class dvd : movie_records {
+private:
 
 };
 
