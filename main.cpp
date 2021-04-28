@@ -33,18 +33,6 @@ class item {
         
 };
 
-class movie_records : item {
-    
-};
-
-class dvd : item {
-
-};
-
-class video_games: item {
-
-};
-
 struct item_Node {
     item data;
     item_Node* next;
@@ -66,6 +54,20 @@ int main() {
 
     ifstream inp_it("items.txt");
     ifstream inp_cus("customers.txt");
+
+    // Read items.txt
+    string line;
+    while (!inp_it.eof()) {
+        getline(inp_it, line);
+    }
+    inp_it.close();
+    line.clear();
+
+    while (!inp_cus.eof()) {
+        getline(inp_cus, line);
+    }
+    inp_cus.close();
+
     if (!inp_it.is_open()) {
         cerr << "Database can not be opened!" << endl;
         return 1;
